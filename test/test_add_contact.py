@@ -1,15 +1,7 @@
 # -*- coding: utf-8 -*-
-import pytest
 from model.contact import Contact
-from fixture.method import Method
 
-@pytest.fixture
-def app(request):
-    fixture = Method()
-    request.addfinalizer(fixture.destroy)
-    return fixture
 
-    
 def test_enter_contact(app):
     app.session.login(username = "admin", password = "secret")
     app.contact.create(Contact(firstname ="Anton", middlename ="Wiktor", lastname ="Lund", nickname ="alund", title ="Cola", company ="Coca Cola", address ="Kungsgatan 11, lgh 4", home ="City",
