@@ -1,13 +1,11 @@
-__author__='sviatlana'
-
-class group:
+class Group:
 
     def __init__(self, name, header, footer):
         self.name = name
         self.header = header
         self.footer = footer
 
-class contact:
+class Contact:
 
     def __init__(self, firstname, middlename, lastname, nickname, title, company, address, home, mobile, work, fax, email, email2, homepage, email3, bday, bmonth, byear, new_group, notes, phone2, address2, ayear, amonth, aday):
         self.firstname = firstname
